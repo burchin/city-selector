@@ -1,10 +1,10 @@
 # city-selector
 the selector of the chinese city
 
-# technology
+### technology
 react + typescript + webpack
 
-# platform
+### platform
 * PC
 * mobile
 
