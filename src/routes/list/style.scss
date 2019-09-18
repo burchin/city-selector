@@ -1,0 +1,11 @@
+.box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  // 禁止选中
+  user-select: none;
+
+  .title {
+    margin-bottom: 8px;
+  }
+}

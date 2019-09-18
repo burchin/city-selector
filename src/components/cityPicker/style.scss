@@ -1,0 +1,64 @@
+.picker {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .list {
+    overflow: auto;
+
+    .listItem {
+      line-height: 45px;
+      padding-left: 8px;
+    }
+
+    .letterItem {
+      line-height: 45px;
+      background-color: #DDD;
+      padding-left: 16px;
+    }
+  }
+
+  .nav {
+    width: 32px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    bottom: 40px;
+    z-index: 9;
+
+    display: flex;
+    flex-direction: column;
+
+    .item {
+      flex-grow: 1;
+
+      text-align: center;
+      width: 100%;
+      padding: 2px 0;
+    }
+  }
+
+  .indicator {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background-color: black;
+    opacity: 0.5;
+
+    position: absolute;
+    z-index: 9;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 24px;
+  }
+
+  ul,
+  li {
+    list-style: none;
+  }
+}
