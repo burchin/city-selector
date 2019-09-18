@@ -14,11 +14,13 @@ interface City {
 }
 
 class CityList extends React.Component<IProps> {
+
   onSelect = (id: string, name: string) => {
     if (this.props.onSelect) {
       this.props.onSelect(id, name);
     }
   };
+  
   render() {
     return (
       <div className={Style.list}>

@@ -11,7 +11,6 @@ interface IProps {
 class PcCityPicker extends React.Component<IProps> {
   constructor(props) {
     super(props);
-    console.log(this.props.data);
     const panes = [
       {
         key: '1',
@@ -23,23 +22,27 @@ class PcCityPicker extends React.Component<IProps> {
     ];
 
     this.state = {
+      label: '请选择',
       listVisiable: false,
       activeKey: panes[0].key,
       panes
     };
   }
+
   showList = (listVisiable: boolean) => {
     this.setState({ listVisiable });
   };
+
   onChange = (activeKey: string) => {
     this.setState({ activeKey });
   };
+
   onSelect = (id: string, name: string) => {
     let panes = this.state['panes'];
     const pane = panes.find((i) => i.key == this.state['activeKey']);
     pane['title'] = name;
     panes = panes.slice(0, parseInt(pane.key));
-    
+
     if (this.props.data[id]) {
       panes.push({
         key: `${panes.length + 1}`,
@@ -48,13 +51,21 @@ class PcCityPicker extends React.Component<IProps> {
         closable: false,
         content: <CityList data={this.props.data[id]} onSelect={this.onSelect.bind(this)} />
       });
+    } else {
+      const label: Array<string> = [];
+      panes.map((item) => {
+        label.push(item.title);
+      });
+      this.setState({ label: label.join('/'), listVisiable: false });
     }
+
     this.setState({ panes, activeKey: `${panes.length}` });
   };
+
   render() {
     return (
       <div className={Style.picker}>
-        <Input placeholder="please choose" onFocus={this.showList.bind(this, true)} />
+        <Input placeholder={this.state['label']} onFocus={this.showList.bind(this, true)} />
         <div
           className={Style.selector}
           style={{ display: this.state['listVisiable'] ? '' : 'none' }}
