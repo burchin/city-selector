@@ -1,4 +1,5 @@
 import Home from './home';
-import H5List from './h5';
+import H5Page from './h5';
+import PcPage from './pc';
 
-export { Home, H5List };
+export { Home, H5Page, PcPage };

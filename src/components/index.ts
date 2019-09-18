@@ -1,5 +1,5 @@
-import CityPicker from './cityPicker';
+import H5CityPicker from './H5CityPicker';
 
 export {
-    CityPicker
+    H5CityPicker
 };

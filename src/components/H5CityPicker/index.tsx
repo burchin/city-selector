@@ -26,7 +26,7 @@ interface INavChangeEvent {
   label: string;
 }
 
-class CityPicker extends React.Component<IProps> {
+class H5CityPicker extends React.Component<IProps> {
   constructor(props) {
     super(props);
 
@@ -96,7 +96,7 @@ class CityPicker extends React.Component<IProps> {
     this.setState({ scrollIndex: index });
   };
 
-  public render() {
+  render() {
     return (
       <div ref="box" className={Style.picker}>
         <SearchBar placeholder="Search" maxLength={8} onSubmit={this.onSearch} />
@@ -108,4 +108,4 @@ class CityPicker extends React.Component<IProps> {
   }
 }
 
-export default CityPicker;
+export default H5CityPicker;
