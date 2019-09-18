@@ -23,7 +23,7 @@ class Home extends React.Component<IProps> {
           <button type="button" className={Style.btn} onClick={this.h5}>
             H5
           </button>
-          <button type="button" className={Style.btn}>
+          <button type="button" className={Style.btn} onClick={this.pc}>
             PC
           </button>
         </div>

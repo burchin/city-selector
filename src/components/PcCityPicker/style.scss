@@ -1,0 +1,29 @@
+.picker {
+  padding: 8px;
+  position: relative;
+
+  input {
+    width: 170px;
+  }
+
+  .selector {
+    padding: 8px;
+    position: absolute;
+    top: 45px;
+    left: 8px;
+
+    border: solid 1px #ddd;
+    background-color: white;
+    width: 530px;
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+
+      > div {
+        width: 25%;
+        cursor: pointer;
+      }
+    }
+  }
+}
