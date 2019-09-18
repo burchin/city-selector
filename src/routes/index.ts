@@ -1,4 +1,4 @@
-import Choose from './choose';
-import List from './list';
+import Home from './home';
+import H5List from './h5';
 
-export { Choose, List };
+export { Home, H5List };

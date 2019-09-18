@@ -1,17 +1,18 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Choose, List } from '~/routes';
+import { Home, H5List } from '~/routes';
 
 import './style.scss';
 
 class App extends React.Component {
-  public render() {
+  render() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Choose} />
-          <Route path="/list" component={List} />
+          <Route exact path="/" component={Home} />
+          <Route path="/h5" component={H5List} />
+          <Route path="/pc" component={H5List} />
         </Switch>
       </BrowserRouter>
     );

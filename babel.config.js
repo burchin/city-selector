@@ -3,6 +3,8 @@ module.exports = {
     [
       '@babel/env',
       {
+        useBuiltIns: 'usage',
+        corejs: 3,
         targets: {
           browsers: ['> 1%', 'last 2 versions', 'not ie <= 8']
         }

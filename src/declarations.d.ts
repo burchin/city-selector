@@ -13,6 +13,7 @@ declare module '*.css' {
 }
 
 declare module '*.json'
+declare module '*.svg'
 
 interface Window {
   require: Function;
